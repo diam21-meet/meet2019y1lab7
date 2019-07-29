@@ -38,16 +38,18 @@ def new_stamp():
 #Draw a snake at the start of the game with a for loop
 #for loop should use range() and count up to the number of pieces
 #in the snake (i.e. START_LENGTH)
-for ______  in __________() :
-    x_pos=snake._____________ #Get x-position with snake.pos()[0]
-    y_pos=snake._____________ 
+for each  in range(START_LENGTH) :
+    x_pos=snake.pos()[0] #Get x-position with snake.pos()[0]
+    y_pos=snake.pos()[1]
 
     #Add SQUARE_SIZE to x_pos. Where does x_pos point to now?    
     # You're RIGHT!
-    x_pos+=__________ 
+    x_pos+=SQUARE_SIZE
 
-    snake.goto(____________,____________) #Move snake to new (x,y)
+    snake.goto(x_pos,y_pos) #Move snake to new (x,y)
    
     #Now draw the new snake part on the screen (hint, you have a 
     #function to do this
-    _____________()
+    new_stamp()
+
+    turtle.mainloop()
